@@ -1,0 +1,17 @@
+// Colores base
+$kratos-red:      #8B0000;
+$leviathan-blue:  #4E87A0;
+$atreyu-yellow:   #D4AF37;
+$nordic-ash:      #2C2C2C;
+$snow-white:      #F2F2F2;
+$forest-green:    #2D5A27;
+
+//Mapa de Colores
+$theme-colors: (
+  "primary":   $leviathan-blue,
+  "danger":    $kratos-red,
+  "warning":   $atreyu-yellow,
+  "success":   $forest-green,
+  "dark":      $nordic-ash,
+  "light":     $snow-white
+);

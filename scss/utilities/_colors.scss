@@ -1,0 +1,20 @@
+@use '../abstracts/variables' as *;
+
+
+@each $name, $color in $theme-colors{
+
+    // Generar clases de color de texto, con los colores base
+    .text-#{$name}{
+        color: $color !important;
+    }
+
+
+    // Generar clases de color de fondo, con los colores base
+    .bg-#{$name}{
+        background-color: $color !important;
+
+        @if $name == "dark" or $name == "danger" or $name == "success"{
+            color: $snow-white;
+        }
+    }
+}

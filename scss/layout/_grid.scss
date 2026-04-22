@@ -1,6 +1,7 @@
 @use "sass:map";
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
+@use '../abstracts/functions' as *;
 
 // --- MODELO DE FILAS ---
 // La fila anula los paddings laterales del contenedor para alinear las columnas.

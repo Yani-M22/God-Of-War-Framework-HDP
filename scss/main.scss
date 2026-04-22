@@ -1,13 +1,13 @@
 // 1. ABSTRACTS (Herramientas)
 @use 'abstracts/variables' as *;
-//@use 'abstracts/mixins' as *;
-//@use 'abstracts/functions';
+@use 'abstracts/mixins' as *;
+@use 'abstracts/functions';
 
 // 2. BASE (Estilos globales)
 @use 'base/reset';
 
 // 3. LAYOUT (Estructura de la página)
-@use '../scss/layout/container';
+@use 'layout/container';
 @use 'layout/grid';
 
 // 4. COMPONENTS (Elementos de UI)

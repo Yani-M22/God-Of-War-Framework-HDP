@@ -1,0 +1,30 @@
+@use 'variables' as *;
+@use "sass:map";
+
+
+//Media Query responsiva
+@mixin respond-to($breakpoint) {
+  $value: map.get($breakpoints, $breakpoint);
+
+  @if $value == null {
+    @warn "Breakpoint `#{$breakpoint}` no existe en $breakpoints.";
+  } @else {
+    @media (min-width: $value) {
+      @content;
+    }
+  }
+}
+
+//Flexbox rápido
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//Truncar texto con ellipsis
+@mixin text-truncate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

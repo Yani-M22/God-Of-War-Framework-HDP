@@ -1,0 +1,13 @@
+@use "sass:math";
+
+//Convertir px a rem
+//font-size: to-rem(24px);  →  1.5rem
+@function to-rem($px, $base: 16px) {
+  @return math.div($px, $base) * 1rem;
+}
+
+//Calcular ancho de columna
+//width: col-width(6);  →  50%
+@function col-width($cols, $total: 12) {
+  @return math.div($cols, $total) * 100%;
+}

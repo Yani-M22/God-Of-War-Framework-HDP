@@ -1,0 +1,27 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/functions' as *;
+
+// --- Tamaños de fuente ---
+.fs-1 { font-size: to-rem(36px); }
+.fs-2 { font-size: to-rem(30px); }
+.fs-3 { font-size: to-rem(24px); }
+.fs-4 { font-size: to-rem(20px); }
+.fs-5 { font-size: to-rem(16px); }
+.fs-6 { font-size: to-rem(14px); }
+
+// --- Grosor ---
+.fw-light   { font-weight: 300; }
+.fw-regular { font-weight: 400; }
+.fw-bold    { font-weight: 700; }
+
+// --- Tipos de fuente ---
+.font-display { font-family: $font-display; }
+.font-accent  { font-family: $font-accent; }
+.font-body    { font-family: $font-body; }
+.font-code    { font-family: $font-code; }
+
+// --- Alineacion de texto ---
+.text-left    { text-align: left; }
+.text-center  { text-align: center; }
+.text-right   { text-align: right; }
+.text-justify { text-align: justify; }

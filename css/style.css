@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Henny+Penny&family=Jolly+Lodger&family=Quicksand:wght@300;400;700&display=swap");
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -13,7 +14,7 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 img, picture, video, canvas, svg {
@@ -353,6 +354,74 @@ a {
     width: 100%;
   }
 }
+.fs-1 {
+  font-size: 2.25rem;
+}
+
+.fs-2 {
+  font-size: 1.875rem;
+}
+
+.fs-3 {
+  font-size: 1.5rem;
+}
+
+.fs-4 {
+  font-size: 1.25rem;
+}
+
+.fs-5 {
+  font-size: 1rem;
+}
+
+.fs-6 {
+  font-size: 0.875rem;
+}
+
+.fw-light {
+  font-weight: 300;
+}
+
+.fw-regular {
+  font-weight: 400;
+}
+
+.fw-bold {
+  font-weight: 700;
+}
+
+.font-display {
+  font-family: "Henny Penny", cursive;
+}
+
+.font-accent {
+  font-family: "Jolly Lodger", cursive;
+}
+
+.font-body {
+  font-family: "Quicksand", sans-serif;
+}
+
+.font-code {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
 .text-primary {
   color: #4A90D9 !important;
 }

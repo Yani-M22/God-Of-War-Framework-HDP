@@ -1,19 +1,29 @@
-// Colores base
-$kratos-red:      #8B0000;
-$leviathan-blue:  #4E87A0;
-$atreyu-yellow:   #D4AF37;
-$nordic-ash:      #2C2C2C;
-$snow-white:      #F2F2F2;
-$forest-green:    #2D5A27;
+// Paleta de Colores
+$red-bird:        #C0392B;  // Red
+$chuck-yellow:    #F5C518;  // Chuck
+$bomb-black:      #1A1A1A;  // Bomb
+$blues-blue:      #4A90D9;  // The Blues (Jay, Jake, Jim)
+$matilda-white:   #F5F5F0;  // Matilda
+$hal-green:       #27AE60;  // Hal
+$bubbles-orange:  #E8821A;  // Bubbles
+$stella-pink:     #D63384;  // Stella
+$silver-gray:     #9E9E9E;  // Silver
+$eagle-gold:      #C8A951;  // Mighty Eagle
+$king-pig-green:  #5A8A3C;  // King Pig
 
 //Mapa de Colores
 $theme-colors: (
-  "primary":   $leviathan-blue,
-  "danger":    $kratos-red,
-  "warning":   $atreyu-yellow,
-  "success":   $forest-green,
-  "dark":      $nordic-ash,
-  "light":     $snow-white
+  "primary":   $blues-blue,
+  "danger":    $red-bird,
+  "warning":   $chuck-yellow,
+  "success":   $hal-green,
+  "dark":      $bomb-black,
+  "light":     $matilda-white,
+  "accent":    $bubbles-orange,
+  "pink":      $stella-pink,
+  "gold":      $eagle-gold,
+  "pig":       $king-pig-green,
+  "silver":    $silver-gray
 );
 
 

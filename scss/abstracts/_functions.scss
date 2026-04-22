@@ -6,7 +6,7 @@
   @return math.div($px, $base) * 1rem;
 }
 
-//Calcular ancho de columna
+//Calcular ancho de las columnas
 //width: col-width(6);  →  50%
 @function col-width($cols, $total: 12) {
   @return math.div($cols, $total) * 100%;

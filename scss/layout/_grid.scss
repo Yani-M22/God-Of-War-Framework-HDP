@@ -15,7 +15,7 @@
 
 // --- SISTEMA DE 12 COLUMNAS (Mobile First) ---
 
-// Generamos las clases base .col-1 a .col-12 que aplican desde móviles (Mobile First).
+// Generamos las clases base .col-1 a .col-12 que aplican desde móviles (Base Movil).
 @for $i from 1 through 12 {
   .col-#{$i} {
     @include col-base;
@@ -24,7 +24,7 @@
 }
 
 // --- SOPORTE RESPONSIVO (Breakpoints) ---
-// Usamos el mapa $breakpoints definido en variables para generar clases md y lg.
+// Uso el mapa $breakpoints definido en variables para generar clases md y lg.
 
 // Tablet (md)
 @media (min-width: map.get($breakpoints, md)) {

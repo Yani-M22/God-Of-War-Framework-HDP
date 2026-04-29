@@ -1441,6 +1441,73 @@ a {
   color: #1A1A1A;
 }
 
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Quicksand", sans-serif;
+  margin-bottom: 16px;
+}
+.table thead {
+  background-color: #1A1A1A;
+  color: #F5F5F0;
+}
+.table thead th {
+  font-family: "Jolly Lodger", cursive;
+  font-size: 1rem;
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 3px solid #C0392B;
+  letter-spacing: 1px;
+}
+.table tbody tr {
+  border-bottom: 1px solid rgba(26, 26, 26, 0.15);
+}
+.table tbody tr td {
+  padding: 10px 16px;
+  font-size: 0.875rem;
+  color: #1A1A1A;
+  vertical-align: middle;
+}
+.table.table-striped tbody tr:nth-child(even) {
+  background-color: rgba(74, 144, 217, 0.08);
+}
+.table.table-hover tbody tr {
+  transition: background-color 0.2s ease;
+}
+.table.table-hover tbody tr:hover {
+  background-color: rgba(192, 57, 43, 0.1);
+  cursor: pointer;
+}
+.table.table-bordered {
+  border: 2px solid #1A1A1A;
+}
+.table.table-bordered thead th {
+  border: 2px solid #4d4d4d;
+}
+.table.table-bordered tbody tr td {
+  border: 1px solid rgba(26, 26, 26, 0.25);
+}
+.table.table-dark {
+  background-color: #1A1A1A;
+  color: #F5F5F0;
+}
+.table.table-dark thead {
+  background-color: #C0392B;
+}
+.table.table-dark thead th {
+  color: #F5F5F0;
+  border-bottom: 3px solid rgb(129.4978723404, 38.4446808511, 29.0021276596);
+}
+.table.table-dark tbody tr {
+  border-bottom: 1px solid rgba(245, 245, 240, 0.1);
+}
+.table.table-dark tbody tr td {
+  color: #F5F5F0;
+}
+.table.table-dark tbody tr:hover {
+  background-color: rgba(245, 245, 240, 0.05);
+}
+
 .fs-1 {
   font-size: 2.25rem;
 }

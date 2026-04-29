@@ -1,0 +1,112 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/functions' as *;
+@use "sass:color";
+
+// --- TABLA BASE ---
+// Ocupa el ancho completo del contenedor
+.table {
+  width: 100%;
+  border-collapse: collapse; // Elimina el espacio entre celdas
+  font-family: $font-body;
+  margin-bottom: 16px;
+
+  // --- ENCABEZADOS ---
+  thead {
+    background-color: $bomb-black; // Fondo oscuro temático
+    color: $matilda-white;
+
+    th {
+      font-family: $font-accent; // Jolly Lodger para los encabezados
+      font-size: to-rem(16px);
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 3px solid $red-bird; // Línea roja temática de Angry Birds
+      letter-spacing: 1px;
+    }
+  }
+
+  // --- CUERPO ---
+  tbody {
+    tr {
+      border-bottom: 1px solid rgba($bomb-black, 0.15); // Separador sutil entre filas
+
+      td {
+        padding: 10px 16px;
+        font-size: to-rem(14px);
+        color: $bomb-black;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  // --- TABLA CON FILAS ALTERNAS ---
+  &.table-striped {
+    tbody {
+      tr:nth-child(even) {
+        background-color: rgba($blues-blue, 0.08); // Fondo suave azul en filas pares
+      }
+    }
+  }
+
+  // --- TABLA CON HOVER ---
+  &.table-hover {
+    tbody {
+      tr {
+        transition: background-color 0.2s ease;
+
+        &:hover {
+          background-color: rgba($red-bird, 0.10); // Hover rojo suave temático
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  // --- TABLA CON BORDES EN TODAS LAS CELDAS ---
+  &.table-bordered {
+    border: 2px solid $bomb-black; // Borde exterior de la tabla
+
+    thead {
+      th {
+        border: 2px solid color.adjust($bomb-black, $lightness: 20%); // Bordes entre encabezados
+      }
+    }
+
+    tbody {
+      tr {
+        td {
+          border: 1px solid rgba($bomb-black, 0.25); // Bordes en todas las celdas
+        }
+      }
+    }
+  }
+
+  // --- TABLA OSCURA ---
+  &.table-dark {
+    background-color: $bomb-black;
+    color: $matilda-white;
+
+    thead {
+      background-color: $red-bird; // Encabezado rojo temático
+      
+      th {
+        color: $matilda-white;
+        border-bottom: 3px solid color.adjust($red-bird, $lightness: -15%);
+      }
+    }
+
+    tbody {
+      tr {
+        border-bottom: 1px solid rgba($matilda-white, 0.10);
+
+        td {
+          color: $matilda-white;
+        }
+
+        &:hover {
+          background-color: rgba($matilda-white, 0.05);
+        }
+      }
+    }
+  }
+}

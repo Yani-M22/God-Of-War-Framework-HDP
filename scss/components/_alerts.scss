@@ -1,0 +1,55 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/functions' as *;
+@use "sass:color";
+
+// --- BASE DE LA ALERTA ---
+// Estilos compartidos por todas las variantes
+%alert-base {
+  display: block;
+  width: 100%;
+  padding: 16px 20px;
+  border-left: 6px solid transparent; // Borde izquierdo, se sobreescribe en cada variante
+  border-radius: 4px;
+  margin-bottom: 16px;
+  font-family: $font-body;
+
+  // --- TÍTULO DE LA ALERTA ---
+  .alert-title {
+    display: block;
+    font-family: $font-accent; // Jolly Lodger para darle personalidad
+    font-size: to-rem(18px);
+    margin-bottom: 4px;
+  }
+
+  // --- MENSAJE DE LA ALERTA ---
+  .alert-message {
+    display: block;
+    font-size: to-rem(14px);
+    line-height: 1.6;
+  }
+}
+
+// --- VARIANTES SEMÁNTICAS ---
+@each $name, $color in $theme-colors {
+  .alert.alert-#{$name} {
+    @extend %alert-base;
+    background-color: rgba($color, 0.15); // Fondo suave semitransparente
+    border-left-color: $color; // Acento lateral del color semántico
+
+    .alert-title {
+      @if $name == "warning" or $name == "light" or $name == "silver" or $name == "gold" {
+        color: color.adjust($color, $lightness: -20%);
+      } @else {
+        color: $color;
+      }
+    }
+
+    .alert-message {
+      @if $name == "warning" or $name == "light" or $name == "silver" or $name == "gold" {
+        color: $bomb-black;
+      } @else {
+        color: color.adjust($color, $lightness: -10%);
+      }
+    }
+  }
+}

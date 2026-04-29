@@ -370,15 +370,15 @@ a {
   text-decoration: none;
 }
 .btn.btn-sm {
-  font-size: to-rem(12px);
+  font-size: 0.75rem;
   padding: 6px 12px;
 }
 .btn.btn-md {
-  font-size: to-rem(16px);
+  font-size: 1rem;
   padding: 10px 20px;
 }
 .btn.btn-lg {
-  font-size: to-rem(20px);
+  font-size: 1.25rem;
   padding: 14px 28px;
 }
 .btn:disabled, .btn.disabled {
@@ -1135,11 +1135,153 @@ a {
   box-shadow: 0 2px 0 #6b6b6b;
 }
 
+.alert.alert-silver, .alert.alert-pig, .alert.alert-gold, .alert.alert-pink, .alert.alert-accent, .alert.alert-light, .alert.alert-dark, .alert.alert-success, .alert.alert-warning, .alert.alert-danger, .alert.alert-primary {
+  display: block;
+  width: 100%;
+  padding: 16px 20px;
+  border-left: 6px solid transparent;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  font-family: "Quicksand", sans-serif;
+}
+.alert.alert-silver .alert-title, .alert.alert-pig .alert-title, .alert.alert-gold .alert-title, .alert.alert-pink .alert-title, .alert.alert-accent .alert-title, .alert.alert-light .alert-title, .alert.alert-dark .alert-title, .alert.alert-success .alert-title, .alert.alert-warning .alert-title, .alert.alert-danger .alert-title, .alert.alert-primary .alert-title {
+  display: block;
+  font-family: "Jolly Lodger", cursive;
+  font-size: 1.125rem;
+  margin-bottom: 4px;
+}
+.alert.alert-silver .alert-message, .alert.alert-pig .alert-message, .alert.alert-gold .alert-message, .alert.alert-pink .alert-message, .alert.alert-accent .alert-message, .alert.alert-light .alert-message, .alert.alert-dark .alert-message, .alert.alert-success .alert-message, .alert.alert-warning .alert-message, .alert.alert-danger .alert-message, .alert.alert-primary .alert-message {
+  display: block;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.alert.alert-primary {
+  background-color: rgba(74, 144, 217, 0.15);
+  border-left-color: #4A90D9;
+}
+.alert.alert-primary .alert-title {
+  color: #4A90D9;
+}
+.alert.alert-primary .alert-message {
+  color: rgb(41.6438356164, 118.3561643836, 198.3561643836);
+}
+
+.alert.alert-danger {
+  background-color: rgba(192, 57, 43, 0.15);
+  border-left-color: #C0392B;
+}
+.alert.alert-danger .alert-title {
+  color: #C0392B;
+}
+.alert.alert-danger .alert-message {
+  color: rgb(150.3319148936, 44.629787234, 33.6680851064);
+}
+
+.alert.alert-warning {
+  background-color: rgba(245, 197, 24, 0.15);
+  border-left-color: #F5C518;
+}
+.alert.alert-warning .alert-title {
+  color: rgb(160.0705394191, 126.8091286307, 6.9294605809);
+}
+.alert.alert-warning .alert-message {
+  color: #1A1A1A;
+}
+
+.alert.alert-success {
+  background-color: rgba(39, 174, 96, 0.15);
+  border-left-color: #27AE60;
+}
+.alert.alert-success .alert-title {
+  color: #27AE60;
+}
+.alert.alert-success .alert-message {
+  color: rgb(29.661971831, 132.338028169, 73.014084507);
+}
+
+.alert.alert-dark {
+  background-color: rgba(26, 26, 26, 0.15);
+  border-left-color: #1A1A1A;
+}
+.alert.alert-dark .alert-title {
+  color: #1A1A1A;
+}
+.alert.alert-dark .alert-message {
+  color: rgb(0.5, 0.5, 0.5);
+}
+
+.alert.alert-light {
+  background-color: rgba(245, 245, 240, 0.15);
+  border-left-color: #F5F5F0;
+}
+.alert.alert-light .alert-title {
+  color: rgb(204.2, 204.2, 178.8);
+}
+.alert.alert-light .alert-message {
+  color: #1A1A1A;
+}
+
+.alert.alert-accent {
+  background-color: rgba(232, 130, 26, 0.15);
+  border-left-color: #E8821A;
+}
+.alert.alert-accent .alert-title {
+  color: #E8821A;
+}
+.alert.alert-accent .alert-message {
+  color: rgb(188.1071428571, 104.3214285714, 18.8928571429);
+}
+
+.alert.alert-pink {
+  background-color: rgba(214, 51, 132, 0.15);
+  border-left-color: #D63384;
+}
+.alert.alert-pink .alert-title {
+  color: #D63384;
+}
+.alert.alert-pink .alert-message {
+  color: rgb(178.187755102, 35.812244898, 106.5632653061);
+}
+
+.alert.alert-gold {
+  background-color: rgba(200, 169, 81, 0.15);
+  border-left-color: #C8A951;
+}
+.alert.alert-gold .alert-title {
+  color: rgb(136.0087336245, 111.7772925764, 42.9912663755);
+}
+.alert.alert-gold .alert-message {
+  color: #1A1A1A;
+}
+
+.alert.alert-pig {
+  background-color: rgba(90, 138, 60, 0.15);
+  border-left-color: #5A8A3C;
+}
+.alert.alert-pig .alert-title {
+  color: #5A8A3C;
+}
+.alert.alert-pig .alert-message {
+  color: rgb(66.8181818182, 102.4545454545, 44.5454545455);
+}
+
+.alert.alert-silver {
+  background-color: rgba(158, 158, 158, 0.15);
+  border-left-color: #9E9E9E;
+}
+.alert.alert-silver .alert-title {
+  color: #6b6b6b;
+}
+.alert.alert-silver .alert-message {
+  color: #1A1A1A;
+}
+
 .badge-pill.badge-silver, .badge-pill.badge-pig, .badge-pill.badge-gold, .badge-pill.badge-pink, .badge-pill.badge-accent, .badge-pill.badge-light, .badge-pill.badge-dark, .badge-pill.badge-success, .badge-pill.badge-warning, .badge-pill.badge-danger, .badge-pill.badge-primary, .badge.badge-silver, .badge.badge-pig, .badge.badge-gold, .badge.badge-pink, .badge.badge-accent, .badge.badge-light, .badge.badge-dark, .badge.badge-success, .badge.badge-warning, .badge.badge-danger, .badge.badge-primary {
   display: inline-block;
   font-family: "Jolly Lodger", cursive;
   font-weight: 700;
-  font-size: to-rem(12px);
+  font-size: 0.75rem;
   padding: 3px 8px;
   border: 2px solid transparent;
   line-height: 1;

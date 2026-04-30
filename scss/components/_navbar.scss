@@ -1,0 +1,185 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/functions" as *;
+@use "sass:color";
+
+
+// --- BASE DE LA NAVBAR ---
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+  background-color: $bomb-black;
+  border-bottom: 3px solid $red-bird; // Acento inferior temático
+  position: relative;
+
+  // --- LOGO/MARCA ---
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    font-family: $font-display; // Permanent Marker para el logo
+    font-size: to-rem(24px);
+    color: $matilda-white;
+    text-decoration: none;
+    letter-spacing: 2px;
+
+    &:hover {
+      color: $red-bird; // Rojo temático en hover
+    }
+    // --- LOGO IMAGEN ---
+    .navbar-logo-img {
+      height: 40px;
+      width: 40px;
+      object-fit: cover;
+      border-radius: 50%; // Forma circular para los logos
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+  }
+
+  // --- BOTÓN HAMBURGUESA (solo visible en móvil) ---
+  .navbar-toggle {
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+
+    @include respond-to(md) {
+      display: none; // Se oculta en tablet y escritorio
+    }
+
+    // Las 3 líneas del ícono hamburguesa
+    span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background-color: $matilda-white;
+      border-radius: 3px;
+      transition: all 0.3s ease;
+    }
+  }
+
+  // --- MENÚ DE ENLACES ---
+  .navbar-menu {
+    display: none; // Oculto en móvil por defecto
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: $bomb-black;
+    padding: 12px 24px;
+    z-index: 100; // Evita que el menú tape o quede tapado por otros elementos
+
+    @include respond-to(md) {
+      display: flex; // Visible en tablet y escritorio
+      flex-direction: row;
+      position: static; // Vuelve al flujo normal
+      width: auto;
+      padding: 0;
+      gap: 8px;
+      z-index: auto; // En desktop se resetea, no necesita apilarse
+    }
+  }
+    // --- CLASE PARA MENÚ ABIERTO (manejada por JS) ---
+    .navbar-menu.navbar-menu--open {
+        display: flex;
+        flex-direction: column;
+    }
+
+  // --- ENLACE INDIVIDUAL ---
+  .navbar-item {
+    font-family: $font-body;
+    font-size: to-rem(15px);
+    color: $matilda-white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
+
+    &:hover {
+      background-color: rgba($matilda-white, 0.1);
+      color: $red-bird;
+    }
+
+    // Enlace activo
+    &.active {
+      color: $red-bird;
+      font-weight: 700;
+    }
+  }
+}
+
+
+// --- VARIANTES DE COLOR ---
+@each $name, $color in $theme-colors {
+  .navbar.navbar-#{$name} {
+    background-color: color.adjust($color, $lightness: -15%);
+    border-bottom-color: color.adjust($color, $lightness: -25%);
+
+    .navbar-menu {
+        background-color: color.adjust($color, $lightness: -15%);
+    }
+    .navbar-brand {
+      @if $name == "warning" or $name == "light" or $name == "silver" or $name == "gold" {
+        color: $bomb-black;
+        &:hover { color: color.adjust($bomb-black, $lightness: 30%); }
+      } @else {
+        color: $matilda-white;
+        &:hover { color: color.adjust($color, $lightness: 30%); }
+      }
+    }
+
+    .navbar-item {
+        @if $name == "warning" or $name == "light" or $name == "silver" or $name == "gold" {
+            color: $bomb-black;
+
+            &.active {
+                background-color: rgba($bomb-black, 0.15); // Fondo oscuro en navbars claras
+                color: $bomb-black;
+            }
+
+            &:hover {
+                background-color: rgba($bomb-black, 0.10);
+                color: color.adjust($bomb-black, $lightness: 30%);
+            }
+        } @else {
+            color: $matilda-white;
+
+            &.active {
+                background-color: rgba($matilda-white, 0.15); // Fondo claro en navbars oscuras
+                color: $matilda-white;
+            }
+
+            &:hover {
+                background-color: rgba($matilda-white, 0.10);
+                color: color.adjust($color, $lightness: 30%);
+            }
+        }
+    }
+
+    .navbar-toggle span {
+      @if $name == "warning" or $name == "light" or $name == "silver" or $name == "gold" {
+        background-color: $bomb-black;
+      } @else {
+        background-color: $matilda-white;
+      }
+    }
+  }
+
+    // --- VARIANTES DE COLOR PARA ENLACE ACTIVO ---
+    .navbar-item.active-#{$name} {
+        background-color: rgba($color, 0.20);
+        color: $color !important; // Sobreescribe el color heredado de la navbar
+        font-weight: 700;
+
+        &:hover {
+        background-color: rgba($color, 0.30);
+        }
+    }
+}

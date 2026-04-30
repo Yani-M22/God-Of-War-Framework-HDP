@@ -26,22 +26,14 @@
 // --- SOPORTE RESPONSIVO (Breakpoints) ---
 // Uso el mapa $breakpoints definido en variables para generar clases md y lg.
 
-// Tablet (md)
-@media (min-width: map.get($breakpoints, md)) {
-  @for $i from 1 through 12 {
-    .col-md-#{$i} {
-      @include col-base;
-      width: col-width($i);
-    }
-  }
-}
-
-// Escritorio (lg)
-@media (min-width: map.get($breakpoints, lg)) {
-  @for $i from 1 through 12 {
-    .col-lg-#{$i} {
-      @include col-base;
-      width: col-width($i);
+// --- SOPORTE RESPONSIVO COMPLETO (todos los breakpoints) ---
+@each $bp, $value in $breakpoints {
+  @media (min-width: $value) {
+    @for $i from 1 through 12 {
+      .col-#{$bp}-#{$i} {
+        @include col-base;
+        width: col-width($i);
+      }
     }
   }
 }

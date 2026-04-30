@@ -32,7 +32,7 @@ AngryBirds-FrameworkHDP es una librería CS básica y ligera que ofrece un siste
 
 | Nombre | Carnet |
 |---|---|
-| [Yanira Verenice Martínez Aguilar] | [MA22013] |
+| Yanira Verenice Martínez Aguilar | MA22013 |
 
 ---
 
@@ -72,11 +72,13 @@ git clone https://github.com/Yani-M22/AngryBirds-FrameworkHDP.git
 
 ## 📁 Estructura del Proyecto
 
-AngryBirds-FrameworkHDP/
-├── assets/
-│   └── logo/
-├── css/
-│   └── style.css
+AngryBirds-FrameworkHDP:
+    - assets:
+        - logo
+
+    - css:
+        - style.css
+
 ├── docs/
 │   └── index.html
 ├── js/

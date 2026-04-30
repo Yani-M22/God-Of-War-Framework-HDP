@@ -28,10 +28,9 @@
       color: $matilda-white;
     }
   }
-}
 
-// --- VARIANTE PÍLDORA ---
-@each $name, $color in $theme-colors {
+
+  // --- VARIANTE PÍLDORA ---
   .badge-pill.badge-#{$name} {
     @extend %badge-base;
     background-color: $color;

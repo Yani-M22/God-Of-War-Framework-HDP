@@ -72,13 +72,12 @@ git clone https://github.com/Yani-M22/AngryBirds-FrameworkHDP.git
 
 ## 📁 Estructura del Proyecto
 
-AngryBirds-FrameworkHDP:
-    - assets:
-        - logo
-
-    - css:
-        - style.css
-
+```
+AngryBirds-FrameworkHDP/
+├── assets/
+│   └── logo/
+├── css/
+│   └── style.css
 ├── docs/
 │   └── index.html
 ├── js/
@@ -111,7 +110,7 @@ AngryBirds-FrameworkHDP:
 │   └── main.scss
 ├── .gitignore
 └── README.md
-
+```
 
 ---
 

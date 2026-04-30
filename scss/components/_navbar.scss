@@ -77,8 +77,7 @@
     left: 0;
     background-color: $bomb-black;
     padding: 12px 24px;
-    z-index: auto; // Evita que el menú tape o quede tapado por otros elementos
-
+    
     @include respond-to(md) {
       display: flex; // Visible en tablet y escritorio
       flex-direction: row;
@@ -86,7 +85,6 @@
       width: auto;
       padding: 0;
       gap: 8px;
-      z-index: auto; // En desktop se resetea, no necesita apilarse
     }
   }
     // --- CLASE PARA MENÚ ABIERTO (manejada por JS) ---

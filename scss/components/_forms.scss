@@ -86,22 +86,12 @@
 .is-valid {
   border-color: $hal-green !important;
   box-shadow: 0 3px 0 $hal-green !important;
-
-  &:focus {
-    border-color: $hal-green;
-    box-shadow: 0 3px 0 $hal-green;
-  }
 }
 
 // Inválido
 .is-invalid {
   border-color: $red-bird !important;
   box-shadow: 0 3px 0 $red-bird !important;
-
-  &:focus {
-    border-color: $red-bird;
-    box-shadow: 0 3px 0 $red-bird;
-  }
 }
 
 // Mensajes de validación
